@@ -1,0 +1,51 @@
+{
+  "name": "Dev Sandbox",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "dev-sandbox",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": true,
+        "python.defaultInterpreterPath": "/usr/bin/python3"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "golang.go",
+        "rust-lang.rust-analyzer",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "redhat.java",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "streetsidesoftware.code-spell-checker",
+        "github.copilot"
+      ]
+    }
+  },
+
+  "features": {},
+
+  "forwardPorts": [8790],
+
+  "postCreateCommand": "echo 'Dev Sandbox ready!'",
+
+  "remoteUser": "codespace",
+
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+    "source=${localWorkspaceFolder}/config/.claude,target=/home/codespace/.claude,type=bind",
+    "source=${localWorkspaceFolder}/config/.happy,target=/home/codespace/.happy,type=bind",
+    "source=${localWorkspaceFolder}/config/.codex,target=/home/codespace/.codex,type=bind",
+    "source=${localWorkspaceFolder}/config/.gemini,target=/home/codespace/.gemini,type=bind",
+    "source=dev-sandbox-npm,target=/home/codespace/.npm,type=volume",
+    "source=dev-sandbox-cache,target=/home/codespace/.cache,type=volume",
+    "source=dev-sandbox-local,target=/home/codespace/.local,type=volume"
+  ]
+}

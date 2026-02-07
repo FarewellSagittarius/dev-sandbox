@@ -1,0 +1,100 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+.conda/
+
+# Environment variables (contains API keys)
+.env
+.env.local
+.env.*.local
+
+# Local deployment config
+docker-compose.yml
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+
+# Claude Code runtime
+.claude/
+
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+
+# Rust (if any)
+target/
+
+# Go (if any)
+*.exe
+*.exe~
+*.dll
+*.dylib
+
+# Config directory (contains SSH keys and personal configs)
+config/
+
+# Development documentation
+IMPLEMENTATION_PLAN.md
+CLAUDE.md
+PARAMETER_MAPPING.md
+IMPROVEMENT_PLAN.md
+
+# Debug and temporary test files
+debug_*.py
+test_debug_*.py
+test_performance_*.py
+test_user_*.py
+test_new_*.py
+
+# Poetry lock (optional, uncomment if you want to track it)
+# poetry.lock
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Docker volumes data (if any local data)
+data/
+

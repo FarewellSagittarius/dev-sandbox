@@ -1,0 +1,3 @@
+[submodule "claude-code-wrapper"]
+	path = claude-code-wrapper
+	url = https://github.com/FarewellSagittarius/claude-code-wrapper.git
