@@ -2,7 +2,7 @@
 set -e
 
 # Start Docker daemon (Docker-in-Docker)
-sudo dockerd &>/var/log/dockerd.log &
+sudo sh -c 'dockerd &>/var/log/dockerd.log' &
 
 # Wait for Docker to be ready
 timeout=30

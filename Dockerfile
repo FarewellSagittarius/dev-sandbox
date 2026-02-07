@@ -56,8 +56,14 @@ RUN groupadd -f docker && usermod -aG docker codespace
 # Setup Claude Code Wrapper
 WORKDIR /opt/claude-wrapper
 
+# Ensure wrapper directory is owned by codespace
+RUN chown codespace:codespace /opt/claude-wrapper
+
 # Copy wrapper source
 COPY --chown=codespace:codespace claude-code-wrapper/ ./
+
+# Create logs directory with correct ownership
+RUN mkdir -p /opt/claude-wrapper/logs && chown codespace:codespace /opt/claude-wrapper/logs
 
 # Create virtual environment and install dependencies
 RUN python3 -m venv .venv \

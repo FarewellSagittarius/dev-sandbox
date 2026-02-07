@@ -1,0 +1,16 @@
+.git/
+.github/
+.claude/
+.devcontainer/
+CLAUDE.md
+README.md
+claude-code-wrapper/.venv/
+claude-code-wrapper/.pytest_cache/
+claude-code-wrapper/__pycache__/
+claude-code-wrapper/.git
+claude-code-wrapper/.claude/
+claude-code-wrapper/tests/
+claude-code-wrapper/docs/
+claude-code-wrapper/logs/
+claude-code-wrapper/*.md
+claude-code-wrapper/.env
