@@ -104,7 +104,7 @@ services:
     volumes:
       - ./config/.claude:/home/codespace/.claude
       - ./config/.claude.json:/home/codespace/.claude.json
-      - ~/.claude/.credentials.json:/home/codespace/.claude/.credentials.json:ro
+      - ~/.claude/.credentials.json:/home/codespace/.claude/.credentials.json
       - ./config/.codex:/home/codespace/.codex
       - ./config/.gemini:/home/codespace/.gemini
       - ./config/.ssh:/home/codespace/.ssh
@@ -208,7 +208,7 @@ docker exec -it dev-sandbox bash
 |------|-------|---------|
 | bind | `./config/.claude` | Claude Code config |
 | bind | `./config/.claude.json` | MCP server config |
-| bind | `~/.claude/.credentials.json` (ro) | Claude credentials |
+| bind | `~/.claude/.credentials.json` | Claude credentials (read-write for token refresh) |
 | bind | `./config/.codex` | Codex config |
 | bind | `./config/.gemini` | Gemini config |
 | bind | `./config/.ssh` | SSH authorized_keys |
